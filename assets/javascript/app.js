@@ -171,7 +171,7 @@
     });
 
     // show number of correct answers
-    resultsContainer.innerHTML = `${numCorrect} out of ${myQuestions.length}`;
+    resultsContainer.innerHTML = '${numCorrect} " + "out of" + " ${quizQuestions.length}';
   }
 
   // side functuion
