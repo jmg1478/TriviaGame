@@ -6,7 +6,11 @@ body{
   text-align: center;
   background-color: #19927e;
 }
-
+p {
+  text-align: center;
+  font-size: 20px;
+  margin-top: 0px;
+}
 
 h1{
   font-weight: 300px;
