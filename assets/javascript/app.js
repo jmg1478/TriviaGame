@@ -35,7 +35,7 @@
     },
     {
       question:
-        "How many qualifying payments need to be made before a PSLF qaulified member can earn forgiveness within the REPAYE plan?",
+        "How many payments need to be made before a PSLF member can earn forgiveness?",
       answers: {
         a: "240",
         b: "200",
@@ -68,7 +68,7 @@
     },
     {
       question:
-        "How long is it taking FedLoan to comfirm PSLF payment on loans transferred from navient?",
+        "How long is it taking FL to confirm PSLF payment on loans from navient?",
       answers: {
         a: "12+ months",
         b: "5 months",
