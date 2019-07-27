@@ -1,6 +1,6 @@
 // questions that will be asked with choices and asnwers
 (function() {
-  var quizQuestions = [
+  const quizQuestions = [
     {
       question:
         "What type of IDR plan does Consolidated Parent Plus Loans qualify for?",
@@ -113,10 +113,10 @@
 
   function buildQuiz() {
     // store the HTML output
-    var output = [];
+    const output = [];
     quizQuestions.forEach((questionsAsked, orderNumber) => {
       // store list of answer choices
-      var answers = [];
+      const answers = [];
 
       // and for each available answer...
       for (letter in questionsAsked.answers) {
@@ -145,16 +145,16 @@
 
   function showResults() {
     // gather answer containers from our quiz
-    var answerContainers = quizContainer.querySelectorAll(".answers");
+    const answerContainers = quizContainer.querySelectorAll(".answers");
 
     // keep track of user's answers
     let numCorrect = 0;
 
     quizQuestions.forEach((questionsAsked, orderNumber) => {
       // find suser input
-      var answerContainer = answerContainers[orderNumber];
-      var selector = `input[name=question${orderNumber}]:checked`;
-      var userAnswer = (answerContainer.querySelector(selector) || {})
+      const answerContainer = answerContainers[orderNumber];
+      const selector = `input[name=question${orderNumber}]:checked`;
+      const userAnswer = (answerContainer.querySelector(selector) || {})
         .value;
 
       // if answer is correct
@@ -171,7 +171,7 @@
     });
 
     // show number of correct answers
-    resultsContainer.innerHTML = '${numCorrect} " + "out of" + " ${quizQuestions.length}';
+    resultsContainer.innerHTML = numCorrect + ' out of ' + quizQuestions.length;
   }
 
   // side functuion
@@ -204,16 +204,16 @@
     showSlide(currentSlide - 1);
   }
 
-  var quizContainer = document.getElementById("quiz");
-  var resultsContainer = document.getElementById("results");
-  var submitButton = document.getElementById("submit");
+  const quizContainer = document.getElementById("quiz");
+  const resultsContainer = document.getElementById("results");
+  const submitButton = document.getElementById("submit");
 
   // display quiz on start up
   buildQuiz();
 
-  var previousButton = document.getElementById("previous");
-  var nextButton = document.getElementById("next");
-  var slides = document.querySelectorAll(".slide");
+  const previousButton = document.getElementById("previous");
+  const nextButton = document.getElementById("next");
+  const slides = document.querySelectorAll(".slide");
   let currentSlide = 0;
 
   showSlide(0);
